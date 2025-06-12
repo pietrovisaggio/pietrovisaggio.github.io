@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ""
+title: "Pietro Visaggio"
 email: visaggip@bc.edu
 description: >- # this means to ignore newlines until "baseurl:"
   PhD Candidate in Economics
@@ -36,7 +36,7 @@ header_pages:
   - index.markdown
   - cv.markdown
   - research.markdown
-  
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

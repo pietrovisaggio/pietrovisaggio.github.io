@@ -1,13 +1,14 @@
 ---
 layout: page
 title: About
+header_title: About Me
 permalink: /
 ---
 
-<img src="/assets/images/PietroVisaggio.jpg"
+<img src="/assets/images/image1.png"
      alt="Pietro Visaggio"
      width="200"
-     style="float: left; margin-right: 1em; margin-bottom: 1em;" />
+     style="float: right; margin-left: 1em; margin-bottom: 1em;" />
 
 
 Welcome to my personal site!  
