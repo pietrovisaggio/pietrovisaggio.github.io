@@ -15,14 +15,17 @@
   display: none !important;
 }
 
+/* Font of the body */
 body {
   background-color: #14263f;  /* ← your new background colour */
 }
 
+/* Font of the header */
 .site-header {
   border-top: 5px solid #14263f;
 }
 
+/* Font of the header title */
 .site-title {
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;   /* ≈ 38 px if root is 16 px */
@@ -30,6 +33,7 @@ body {
   letter-spacing: 0.5px;      /* optional tighter or looser tracking */
 }
 
+/* Font of the page title */
 .page-title {
   font-family: "Graphik", Helvetica, Arial, sans-serif; /* or any font */
   font-size: 2.0rem;   /* ≈ 38 px if root is 16 px */
