@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "/assets/css/cv.css" | relative_url }}">
+</head>
+<body class="cv-body">
+  {% include header.html %}
+
+    <div class="cv-container">
+    <div class="cv">
+        <span class="cv-label">Curriculum Vitae</span>
+        <a class="cv-pdf"
+        href="{{ "/assets/ResumeVisaggioPietro.pdf" | relative_url }}"
+        download>
+        <img src="{{ "/assets/images/pdf_icon.png" | relative_url }}" alt="">
+        </a>
+    </div>
+
+    <main class="cv-content">
+        {{ content }}
+    </main>
+    </div>
+
+  <script src="{{ "/assets/js/cv.js" | relative_url }}"></script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 ---
 ---
-@import "custom";  // pulls in your overrides
-@import "minima";  // then the rest of the theme
+@import "custom";   /* ①  variables – defines $brand-color-light */
+@import "minima";   /* ②  theme styles that use those variables  */
+@import "cv";       /* ③  your CV overrides – now the variable exists */
 
 
 /*  Remove the thin top border line */
