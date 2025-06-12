@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /About/
+permalink: /
 ---
 
 <img src="/assets/images/PietroVisaggio.jpg"
