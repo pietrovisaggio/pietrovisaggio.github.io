@@ -18,16 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-nav:
-  - title: "About"
-    url: "/about/"
-  - title: "Research"
-    url: "/research/"
-  - title: "CV"
-    url: "/assets/PietroVisaggio_CV.pdf"
-
-
-
 title: ""
 email: visaggip@bc.edu
 description: >- # this means to ignore newlines until "baseurl:"
