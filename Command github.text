@@ -1,0 +1,7 @@
+# start 4000 local host
+bundle exec jekyll serve --livereload
+
+#push to gith hub
+git add _config.yml
+git commit -m "Update confg"
+git push
