@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pita
-permalink: /Pita/
+permalink: /
 ---
 
 <img src="/assets/images/PietroVisaggio.jpg"
