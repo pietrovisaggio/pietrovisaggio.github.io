@@ -1,0 +1,11 @@
+---
+---
+@import "custom";  // pulls in your overrides
+@import "minima";  // then the rest of the theme
+
+
+// ↓ add this at the very bottom ↓
+body {
+  background-color: #14263f;  /* ← your new background colour */
+}
+
