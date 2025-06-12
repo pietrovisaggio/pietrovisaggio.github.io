@@ -7,7 +7,7 @@ permalink: /
 
 <img src="/assets/images/image1.png"
      alt="Pietro Visaggio"
-     width="200"
+     width="300"
      style="float: right; margin-left: 1em; margin-bottom: 1em;" />
 
 

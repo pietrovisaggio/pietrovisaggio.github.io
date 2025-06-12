@@ -1,9 +1,15 @@
 // assets/_custom.scss
 
 // override Minima’s defaults:
-$brand-color:      #14263f !default;
-$grey-color:       #14263f !default;
-$grey-color-light: #14263f !default; //lighten($grey-color, 30%) !default;
+$brand-color:      #ffffff !default;
+$grey-color:       #ffffff !default;
+$grey-color-light: #ffffff !default; //lighten($grey-color, 30%) !default;
 $grey-color-dark:  #ffffff !default; // darken($grey-color, 20%) !default;
 
 $text-color: #ffffff !default;
+
+// global body / paragraph typeface
+$base-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
+
+// headings, site title, nav links
+$header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;

@@ -34,8 +34,9 @@ plugins:
 
 header_pages:
   - index.markdown
-  - cv.markdown
   - research.markdown
+  - cv.markdown
+
 
 
 # Exclude from processing.

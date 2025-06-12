@@ -4,11 +4,37 @@
 @import "minima";  // then the rest of the theme
 
 
-// ↓ add this at the very bottom ↓
+/*  Remove the thin top border line */
+.site-header {
+  border-top: none;
+  border-bottom: none;
+}
+
+/* Hide the entire footer (title, email, GitHub/Twitter, description)  */
+.site-footer {
+  display: none !important;
+}
+
 body {
   background-color: #14263f;  /* ← your new background colour */
 }
 
 .site-header {
   border-top: 5px solid #14263f;
+}
+
+.site-title {
+  font-family: "Graphik", Helvetica, Arial, sans-serif;
+  font-size: 2.5rem;   /* ≈ 38 px if root is 16 px */
+  font-weight: 200;           /* bold */
+  letter-spacing: 0.5px;      /* optional tighter or looser tracking */
+}
+
+.page-title {
+  font-family: "Graphik", Helvetica, Arial, sans-serif; /* or any font */
+  font-size: 2.0rem;   /* ≈ 38 px if root is 16 px */
+  line-height: 1.1;    /* tighter spacing */
+  font-weight: 500;      /* bold */
+  letter-spacing: 0.5px;    
+  margin: 0.75em 0 -0.75em;       /* tweak spacing as you like */
 }
