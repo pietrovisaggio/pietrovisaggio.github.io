@@ -37,7 +37,7 @@ header_pages:
   - research.markdown
   - cv.markdown
 
-include: ["favicon.ico"]
+
 
 
 # Exclude from processing.

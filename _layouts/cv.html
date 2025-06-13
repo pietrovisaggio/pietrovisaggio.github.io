@@ -1,27 +1,33 @@
 <!doctype html>
 <html lang="en">
-<head>
-  {% include head.html %}
-  <link rel="stylesheet" href="{{ "/assets/css/cv.css" | relative_url }}">
-</head>
-<body class="cv-body">
-  {% include header.html %}
+  <head>
+    {% include head.html %}
+    {% include c_head.html %}
+  </head>
 
-    <div class="cv-container">
-    <div class="cv">
-        <span class="cv-label">Curriculum Vitae</span>
-        <a class="cv-pdf"
-        href="{{ "/assets/ResumeVisaggioPietro.pdf" | relative_url }}"
-        download>
-        <img src="{{ "/assets/images/pdf_icon.png" | relative_url }}" alt="">
+  <body>
+    {% include header.html %}
+
+    <!-- ───────── ONE single wrapper ───────── -->
+    <div class="wrapper">
+
+      <!-- sticky CV label + icon -->
+      <div class="cv">
+        <span class="cv-label">Curriculum&nbsp;Vitae</span>
+
+        <a  class="cv-pdf"
+            href="{{ '/assets/ResumeVisaggioPietro.pdf' | relative_url }}"
+            download>
+          <img src="{{ '/assets/images/pdf_icon.png' | relative_url }}" alt="">
         </a>
-    </div>
+      </div>
 
-    <main class="cv-content">
+      <!-- cards -->
+      <main class="cv-content">
         {{ content }}
-    </main>
-    </div>
+      </main>
 
-  <script src="{{ "/assets/js/cv.js" | relative_url }}"></script>
-</body>
+    </div><!-- /wrapper -->
+
+  </body>
 </html>
