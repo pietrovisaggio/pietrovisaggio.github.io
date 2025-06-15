@@ -6,27 +6,27 @@ document.addEventListener("DOMContentLoaded", function() {
   const root = document.documentElement;
   const storageKey = "theme-preference";
 
-    function applyTheme(theme) {
+  function applyTheme(theme) {
     if (theme === "light") {
-        root.classList.add("light-mode");
-        root.classList.remove("dark-mode");
-        if (iconSpan) iconSpan.textContent = "☀️"; // show sun icon to switch back to dark?
-        // or keep as "🌙" if you want opposite semantics
+      root.classList.add("light-mode");
+      root.classList.remove("dark-mode");
+      if (iconSpan) iconSpan.textContent = "🌙"; 
+      // Show moon icon when in light mode so user can switch back to dark.
     } else {
-        root.classList.add("dark-mode");
-        root.classList.remove("light-mode");
-        if (iconSpan) iconSpan.textContent = "🌙"; // show moon icon even in dark?
-        // but typically you want "☀️" here so clicking yields light.
+      root.classList.add("dark-mode");
+      root.classList.remove("light-mode");
+      if (iconSpan) iconSpan.textContent = "☀️"; 
+      // Show sun icon when in dark mode so user can switch to light.
     }
-    }
+  }
 
-  // On load: check localStorage, else system preference
+  // On load: check localStorage; if none, force dark mode
   const saved = localStorage.getItem(storageKey);
   if (saved === "light" || saved === "dark") {
     applyTheme(saved);
   } else {
-    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-    applyTheme(prefersLight ? "light" : "dark");
+    // Force dark mode as default, regardless of system preference
+    applyTheme("dark");
   }
 
   toggleButton.addEventListener("click", function() {
