@@ -1,0 +1,30 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  {% include head.html %}
+  {% include c_head.html %}  <!-- if you have custom head includes (favicon, meta, etc.) -->
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <!-- Your original article markup goes here -->
+      <article class="page">
+        <header class="page-header">
+          <h1 class="page-title">{{ page.header_title | default: page.title }}</h1>
+        </header>
+        <div class="page-content">
+          {{ content }}
+        </div>
+      </article>
+    </div>
+  </main>
+
+  {% include footer.html %}
+  <!-- If you have theme-toggle or other scripts, include here: -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+</body>
+</html>

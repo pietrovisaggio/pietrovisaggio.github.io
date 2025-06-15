@@ -1,0 +1,25 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+
+    <div class="nav-and-toggle">
+      <nav class="site-nav">
+        <!-- hamburger and links -->
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">…</span>
+        </label>
+        <div class="trigger">
+          <!-- links: About, Research, CV -->
+          <a class="page-link" href="/">About</a>
+          <a class="page-link" href="/Research/">Research</a>
+          <a class="page-link" href="/cv/">CV</a>
+        </div>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+      </button>
+    </div>
+  </div>
+</header>

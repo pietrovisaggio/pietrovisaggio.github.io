@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About
 header_title: About Me
 permalink: /

@@ -22,8 +22,16 @@ body {
 }
 
 /* Font of the header */
-.site-header {
-  border-top: 5px solid #14263f;
+/* Light-mode header style */
+.light-mode .site-header {   /* or whatever light-mode color you want */
+  background-color: #ffffff;       /* example */
+  /* other header styles for light mode */
+}
+
+/* Dark-mode header style */
+.dark-mode .site-header {
+  background-color: #14263f;       /* example dark background */
+  /* other header styles for dark mode */
 }
 
 /* Font of the header title */
@@ -34,6 +42,19 @@ body {
   letter-spacing: 0.5px;      /* optional tighter or looser tracking */
 }
 
+/* Default (dark-mode) header text */
+.site-header .site-title,
+.site-header .site-nav .page-link {
+  color: #ffffff; /* white text on dark background */
+}
+
+/* Light-mode overrides */
+.light-mode .site-header .site-title,
+.light-mode .site-header .site-nav .page-link {
+  color: #14263f; /* black text on light background */
+}
+
+
 /* Font of the page title */
 .page-title {
   font-family: "Graphik", Helvetica, Arial, sans-serif; /* or any font */
@@ -42,4 +63,27 @@ body {
   font-weight: 500;      /* bold */
   letter-spacing: 0.5px;    
   margin: 0.75em 0 -0.75em;       /* tweak spacing as you like */
+}
+
+
+
+/* Add your theme-toggle styles, if using CSS variables approach: */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #14263f;
+}
+.dark-mode {
+  --bg-color: #14263f;
+  --text-color: #ffffff;
+}
+
+
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+}
+a {
+  color: var(--link-color);
 }

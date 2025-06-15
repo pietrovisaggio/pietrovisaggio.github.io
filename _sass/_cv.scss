@@ -39,11 +39,30 @@
   margin-top: 2.5rem;
 }
 
-.cv-card {
-  background: rgba(#fff, .05);
-  border-radius: 6px;
+/* 1) Dark-mode styling for CV cards (reinforce existing dark look) */
+.dark-mode .cv-card {
+  // background as you had:
+  background: rgba(255, 255, 255, 0.05); // same as rgba(#fff, .05)
+  color: #fff;                           // ensure text is light in dark mode
+  border-radius: 6px;                         // or whichever you prefer
   padding: 2.25rem 1.5rem;
   margin-bottom: 2rem;
+  a, h2, p, li {
+    color: inherit; // inherits #fff
+  }
+}
+
+/* 2) Light-mode styling for CV cards */
+.light-mode .cv-card {
+  background: #ffffff;       // white card background
+  color: #222222;            // dark text for readability
+  border: 1px solid #ddd; 
+  border-radius: 6px;                         // or whichever you prefer
+  padding: 2.25rem 1.5rem;
+  margin-bottom: 2rem;
+  a, h2, p, li {
+    color: inherit; // dark text
+  }
 }
 
 /* tidy the heading inside the card */

@@ -13,3 +13,58 @@ $base-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 
 // headings, site title, nav links
 $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
+
+
+
+
+/* Ensure the header wrapper is flex, aligning title left and nav+toggle right */
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+/* 1b. Site title: no extra flex-grow */
+.site-header .site-title {
+  margin-right: 14rem; /* small gap before nav */
+}
+
+/* Group nav links and toggle in a row */
+.nav-and-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0rem;  /* or even 0.25rem if you like it very tight */
+}
+
+/* Style the theme-toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 1.25rem;
+  cursor: pointer;
+  font-size: 0.7rem; /* adjust icon size */
+  color: inherit;     /* inherit current text color */
+}
+/* Optional: on focus outline, etc. */
+.theme-toggle:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline */
+.theme-toggle:focus {
+  outline: none;
+}
+
+/* Remove any default box-shadow on focus/active */
+.theme-toggle:focus,
+.theme-toggle:active {
+  box-shadow: none;
+}
+
+/* If some UA stylesheet applies a background on :active: */
+.theme-toggle:active {
+  background: transparent;
+}
