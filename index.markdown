@@ -14,10 +14,17 @@ permalink: /
 Welcome to my personal site!  
 
 I’m Pietro Visaggio, a PhD candidate in Economics working on electricity markets.  
-Here you’ll find my research summaries, publications, CV, and contact info.
+My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on electricity markets. If you want more information, please refer to my CV
+<a  class="cv-pdf"
+  href="{{ '/assets/ResumeVisaggioPietro.pdf' | relative_url }}"
+  download>
+  <img src="{{ '/assets/images/pdf_icon.png' | relative_url }}" alt=""
+  style="width:16px; height:auto; vertical-align:middle; margin-left:0rem; margin-bottom:0.5rem;">
+</a>
+.
 
 
-You can contact me by e-mail 
+You can contact me by e-mail
 <a href="mailto:visaggip@bc.edu" aria-label="Send email to Pietro Visaggio">
   <img src="{{ '/assets/images/email_icon.png' | relative_url }}"
        alt="Email icon"

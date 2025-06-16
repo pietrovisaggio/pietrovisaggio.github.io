@@ -110,3 +110,34 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 .contact-links a:hover img {
   opacity: 1;
 }
+
+/* Research href */
+/* Default (non-hover) link color in dark mode */
+.dark-mode .custom-link,
+.dark-mode a.custom-link:link,
+.dark-mode a.custom-link:visited {
+  color: #ffffff; /* or your desired default color in dark mode */
+  text-decoration: none;
+}
+
+/* Hover in dark mode */
+.dark-mode .custom-link:hover,
+.dark-mode a.custom-link:hover {
+  color: #80cdfb; /* slightly lighter on hover */
+  text-decoration: underline;
+}
+
+/* Default (non-hover) link color in light mode */
+.light-mode .custom-link,
+.light-mode a.custom-link:link,
+.light-mode a.custom-link:visited {
+  color: #000000; /* choose a sufficiently dark/red color so it’s readable */
+  text-decoration: none;
+}
+
+/* Hover in light mode */
+.light-mode .custom-link:hover,
+.light-mode a.custom-link:hover {
+  color: #cb3517; /* slightly darker red on hover, adjust as you like */
+  text-decoration: underline;
+}
