@@ -47,6 +47,7 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
   font-size: 0.7rem; /* adjust icon size */
   color: inherit;     /* inherit current text color */
 }
+
 /* Optional: on focus outline, etc. */
 .theme-toggle:focus {
   outline: 2px solid currentColor;
@@ -67,4 +68,45 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 /* If some UA stylesheet applies a background on :active: */
 .theme-toggle:active {
   background: transparent;
+}
+
+
+/* EMAIL icon */
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  /* optionally tweak margin, color changes on hover, etc. */
+}
+.contact-email-link img {
+  width: 1.5rem; /* 24px if root font-size is 16px */
+  height: auto;
+  margin-left: 0.25rem;
+}
+
+/* LINKEDIN */
+.contact-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between items */
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact-links img,
+.contact-links svg {
+  width: 1.5rem; /* ~24px if root font-size is 16px */
+  height: auto;
+}
+
+/* Optional: change opacity on hover */
+.contact-links a img {
+  opacity: 0.85;
+  transition: opacity 0.2s ease-in-out;
+}
+.contact-links a:hover img {
+  opacity: 1;
 }

@@ -4,6 +4,10 @@
 @import "minima";   /* ②  theme styles that use those variables  */
 @import "cv";       /* ③  your CV overrides – now the variable exists */
 
+.wrapper {
+  /* Increase max-width so content spans more of viewport (reducing side margins) */
+  max-width: 800px;   /* or whatever suits you; larger = smaller side margins on wide screens */
+}
 
 /*  Remove the thin top border line */
 .site-header {
