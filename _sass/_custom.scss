@@ -72,6 +72,10 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 }
 
 
+.page-header {
+  margin-bottom: 3rem; /* adjust as needed, e.g. 1.5rem, 2rem, 3rem */
+}
+
 /* EMAIL icon */
 .contact-email-link {
   display: inline-flex;
