@@ -21,7 +21,7 @@
 title: "Pietro Visaggio"
 email: visaggip@bc.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  PhD Candidate in Economics
+  PhD Candidate in Economics at Boston College
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -36,7 +36,7 @@ header_pages:
   - index.markdown
   - research.markdown
   - cv.markdown
-  
+
 
 
 
