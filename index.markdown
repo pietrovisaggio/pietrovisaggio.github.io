@@ -7,13 +7,13 @@ permalink: /
 
 
 
-Welcome to my personal site!  
+Hello there, welcome to my website!  
 
-I’m Pietro Visaggio, a PhD candidate at Boston College in Economics working on electricity markets.  
-My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on electricity markets. If you want more information, please refer to my <a href="{{ "/cv/" | relative_url }}" class="custom-link">CV</a>.
+I am a PhD candidate in Economics at Boston College. My main research fields are environmental economics and empirical industrial organization, with a focus on energy economics. In my <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> I study how electricity markets can progress toward a decarbonized grid, with particular attention to the integration of Battery Energy Storage Systems.
 
+<!-- Here you can download my <a href="{{ "/cv/" | relative_url }}" class="custom-link">CV</a>. -->
 
-You can contact me by e-mail
+You can contact me via e-mail
 <a href="mailto:visaggip@bc.edu" aria-label="Send email to Pietro Visaggio">
   <img src="{{ '/assets/images/email_icon.png' | relative_url }}"
        alt="Email icon"
