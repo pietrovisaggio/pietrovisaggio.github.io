@@ -9,7 +9,7 @@ permalink: /
 
 Welcome to my personal site!  
 
-I’m Pietro Visaggio, a PhD candidate in Economics working on electricity markets.  
+I’m Pietro Visaggio, a PhD candidate at Boston College in Economics working on electricity markets.  
 My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on electricity markets. If you want more information, please refer to my <a href="{{ "/cv/" | relative_url }}" class="custom-link">CV</a>.
 
 
