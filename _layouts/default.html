@@ -4,27 +4,46 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
   {% include head.html %}
-  {% include c_head.html %}  <!-- if you have custom head includes (favicon, meta, etc.) -->
+  {% include c_head.html %}  <!-- your custom head includes (favicon, meta, etc.) -->
 </head>
 <body>
   {% include header.html %}
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      <!-- Your original article markup goes here -->
       <article class="page">
         <header class="page-header">
           <h1 class="page-title">{{ page.header_title | default: page.title }}</h1>
         </header>
-        <div class="page-content">
-          {{ content }}
-        </div>
+
+        {% comment %}
+        For the About page, use a two-column layout: text + profile image,
+        both inside the same .wrapper so their right edge lines up with nav.
+        {% endcomment %}
+        {% if page.title == "About" %}
+          <div class="about-grid">
+            <div class="about-text">
+              {{ content }}
+            </div>
+            <div class="about-image">
+              <!-- Adjust src/path to your actual image -->
+              <img src="{{ '/assets/images/image1.png' | relative_url }}"
+                   alt="Pietro Visaggio"
+                   class="profile-img">
+            </div>
+          </div>
+        {% else %}
+          <div class="page-body">
+            {{ content }}
+          </div>
+        {% endif %}
+
       </article>
     </div>
   </main>
 
   {% include footer.html %}
-  <!-- If you have theme-toggle or other scripts, include here: -->
+  <!-- theme toggle script, etc. -->
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
 </body>
 </html>

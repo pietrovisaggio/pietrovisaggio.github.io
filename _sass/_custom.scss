@@ -27,7 +27,7 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 
 /* 1b. Site title: no extra flex-grow */
 .site-header .site-title {
-  margin-right: 14rem; /* small gap before nav */
+  margin-right: 19.25rem; /* small gap before nav */
 }
 
 /* Group nav links and toggle in a row */
@@ -42,7 +42,8 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
   background: none;
   border: none;
   padding: 0;
-  margin: 1.25rem;
+  margin-left: 1.25rem;
+  margin-right: 0rem;
   cursor: pointer;
   font-size: 0.7rem; /* adjust icon size */
   color: inherit;     /* inherit current text color */
@@ -116,14 +117,14 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 .dark-mode .custom-link,
 .dark-mode a.custom-link:link,
 .dark-mode a.custom-link:visited {
-  color: #ffffff; /* or your desired default color in dark mode */
+  color: #8cd3fc; /* or your desired default color in dark mode */
   text-decoration: none;
 }
 
 /* Hover in dark mode */
 .dark-mode .custom-link:hover,
 .dark-mode a.custom-link:hover {
-  color: #80cdfb; /* slightly lighter on hover */
+  color: #8cd3fc; /* slightly lighter on hover */
   text-decoration: underline;
 }
 
@@ -131,13 +132,48 @@ $header-font-family: "Graphik", Helvetica, Arial, sans-serif !default;
 .light-mode .custom-link,
 .light-mode a.custom-link:link,
 .light-mode a.custom-link:visited {
-  color: #000000; /* choose a sufficiently dark/red color so it’s readable */
+  color: #cb1717; /* choose a sufficiently dark/red color so it’s readable */
   text-decoration: none;
 }
 
 /* Hover in light mode */
 .light-mode .custom-link:hover,
 .light-mode a.custom-link:hover {
-  color: #cb3517; /* slightly darker red on hover, adjust as you like */
+  color: #cb1717; /* slightly darker red on hover, adjust as you like */
   text-decoration: underline;
+}
+
+
+
+
+
+
+// Two‐column layout on About page:
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;             // horizontal gap between text and image
+  align-items: start;    // align top edges
+  margin-top: 1rem;      // adjust vertical spacing if you like
+}
+
+// Text column will flow normally:
+.about-text {
+  // No special rules needed here
+}
+
+// Image column: ensure image scales responsively
+.about-image img.profile-img {
+  width: 300px;          // or max-width if you prefer: e.g. max-width: 100%; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+// On narrower screens, switch to single column:
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; // stack
+  }
 }
