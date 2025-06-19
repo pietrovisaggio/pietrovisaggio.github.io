@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: ""
 header_title: About Me
 permalink: /
 ---
