@@ -1,8 +1,9 @@
 ---
 layout: default
-title: ""
+title: "Pietro Visaggio"
 header_title: About Me
 permalink: /
+description: "PhD Candidate in Economics"
 ---
 
 
@@ -15,7 +16,7 @@ I am a PhD candidate in Economics at Boston College. My main research fields are
 
 You can contact me via e-mail
 <a href="mailto:visaggip@bc.edu" aria-label="Send email to Pietro Visaggio">
-  <img src="{{ '/assets/images/email_icon.png' | relative_url }}"
+  <img src="{{'/assets/images/email_icon.png' | relative_url}}"
        alt="Email icon"
        style="width:24px; vertical-align:middle; margin-left:0rem; margin-bottom:0.5rem;">
 </a>
