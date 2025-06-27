@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Pietro Visaggio"
-header_title: About Me
 permalink: /
 description: "PhD Candidate in Economics"
 ---
