@@ -6,7 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{%- seo -%}
+<title>{{ site.title }}</title>
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="application-name"       content="{{ site.title }}" />
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+
 
 <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 {%- feed_meta -%}
