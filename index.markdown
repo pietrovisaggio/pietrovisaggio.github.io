@@ -6,7 +6,11 @@ permalink: /
 description: "PhD Candidate in Economics"
 ---
 
-
+<img
+  src="{{ '/assets/images/image1.png' | relative_url }}"
+  alt="Pietro Visaggio"
+  width="300"
+  style="float:right; margin-left:1em; margin-bottom:1em;" />
 
 Hello there, welcome to my website!  
 
