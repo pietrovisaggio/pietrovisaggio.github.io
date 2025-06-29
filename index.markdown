@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "About Me"
+title: "About Me:"
 permalink: /
 description: "PhD Candidate in Economics"
 ---
