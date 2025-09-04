@@ -13,7 +13,7 @@ description: "PhD Candidate in Economics"
 
 Hello there, welcome to my website!  
 
-I am a PhD candidate in Economics at Boston College. My main research fields are environmental economics and empirical industrial organization, with a focus on energy economics. In my <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> I study how electricity markets can progress toward a decarbonized grid, with particular attention to the integration of Battery Energy Storage Systems.
+I am a PhD candidate in Economics at Boston College. My main research fields are empirical Industrial Organization and Energy Economics. My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> investigates how integrating renewable technologies and Battery Energy Storage Systems into electricity markets influences market outcomes.
 
 <!-- Here you can download my <a href="{{ "/cv/" | relative_url }}" class="custom-link">CV</a>. -->
 

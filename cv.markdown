@@ -9,7 +9,7 @@ permalink: /cv/
   <h2>Education</h2>
 
   <div class="cv-entry">
-  <span class="cv-date">2022 – </span>
+  <span class="cv-date">2026 (Expected) </span>
 
   <div class="cv-details">
     <span class="cv-title">Ph.D. candidate in Economics at Boston College</span><br>
@@ -18,7 +18,7 @@ permalink: /cv/
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date">2020 – 2022</span>
+  <span class="cv-date"> 2022</span>
 
   <div class="cv-details">
     <span class="cv-title">Master of Arts in Economics</span><br>
@@ -27,7 +27,7 @@ permalink: /cv/
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date">2018 – 2020</span>
+  <span class="cv-date">2020</span>
 
   <div class="cv-details">
     <span class="cv-title">Master's Degree in Economics</span><br>
@@ -36,7 +36,7 @@ permalink: /cv/
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date">2015 – 2018</span>
+  <span class="cv-date">2018</span>
 
   <div class="cv-details">
     <span class="cv-title">Bachelor's Degree in Science of Financial Intermediaries and Markets</span><br>
@@ -49,46 +49,62 @@ permalink: /cv/
 
 
 <div class="cv-card" id="teaching">
-  <h2>Teaching and Research Assistantship</h2>
+  <h2>Teaching Experience</h2>
 
   <div class="cv-entry">
-  <span class="cv-date">Fall 2025</span>
+  <span class="cv-date">F 2025</span>
 
   <div class="cv-details">
     <span class="cv-title">Machine Learning</span><br>
-    <span class="cv-institution">Class Instructor at Boston College</span>
+    <span class="cv-institution">Teaching Fellow, Boston College</span>
   </div>
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date">Summer 2025</span>
+  <span class="cv-date">SU 2025</span>
 
   <div class="cv-details">
     <span class="cv-title">Environmental Economics and Policy</span><br>
-    <span class="cv-institution">Class Instructor at Boston College</span>
+    <span class="cv-institution">Teaching Fellow, Boston College</span>
   </div>
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date">Summer 2024</span>
+  <span class="cv-date">SU 2024</span>
 
   <div class="cv-details">
     <span class="cv-title">Environmental Economics and Policy</span><br>
-    <span class="cv-institution">Class Instructor at Boston College</span>
+    <span class="cv-institution">Teaching Fellow, Boston College</span>
   </div>
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date"> Summer 2023</span>
+  <span class="cv-date">SP 2024</span>
+
+  <div class="cv-details">
+    <span class="cv-title">Stata Lab</span><br>
+    <span class="cv-institution"> Teaching Assistant Coordinato, Boston College</span>
+  </div>
+</div>
+
+  <div class="cv-entry">
+  <span class="cv-date"> SU 2023</span>
 
   <div class="cv-details">
     <span class="cv-title">Statistics</span><br>
-    <span class="cv-institution">Class Instructor at Boston College</span>
+    <span class="cv-institution">Teaching Fellow, Boston College</span>
   </div>
 </div>
 
+</div>
+
+
+
+<div class="cv-card" id="teaching">
+  <h2>Research Experience</h2>
+
   <div class="cv-entry">
-  <span class="cv-date">2021</span>
+  <span class="cv-date">SU 2021</span>
 
   <div class="cv-details">
     <span class="cv-title">Research assistant to Prof. Richard Sweeney</span><br>
@@ -97,7 +113,7 @@ permalink: /cv/
 </div>
 
   <div class="cv-entry">
-  <span class="cv-date"> 2019</span>
+  <span class="cv-date">SU 2019</span>
 
   <div class="cv-details">
     <span class="cv-title">Research assistant to Prof. Luigi Paciello</span><br>
@@ -107,6 +123,8 @@ permalink: /cv/
 
 </div>
 
+
+
 <div class="cv-card" id="other">
   <h2>Other</h2>
 
@@ -114,7 +132,7 @@ permalink: /cv/
   <span class="cv-date">Programming <br> Skills</span>
 
   <div class="cv-details">
-    <span class="cv-title">Julia, Python, Stata, R</span>
+    <span class="cv-title">Julia, Python, Stata, R, Latex</span>
   </div>
 </div>
 
@@ -122,7 +140,7 @@ permalink: /cv/
   <span class="cv-date">Language</span>
 
   <div class="cv-details">
-    <span class="cv-title">Italian, English, Franch (A2)</span>
+    <span class="cv-title">Italian, English</span>
   </div>
 </div>
 
