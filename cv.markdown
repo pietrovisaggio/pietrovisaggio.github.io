@@ -83,7 +83,7 @@ permalink: /cv/
 
   <div class="cv-details">
     <span class="cv-title">Stata Lab</span><br>
-    <span class="cv-institution"> Teaching Assistant Coordinato, Boston College</span>
+    <span class="cv-institution"> Teaching Assistant Coordinator, Boston College</span>
   </div>
 </div>
 
