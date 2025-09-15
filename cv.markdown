@@ -9,7 +9,7 @@ permalink: /cv/
   <h2>Education</h2>
 
   <div class="cv-entry">
-  <span class="cv-date">2026 (Expected) </span>
+  <span class="cv-date">2026 (Exp.) </span>
 
   <div class="cv-details">
     <span class="cv-title">Ph.D. candidate in Economics at Boston College</span><br>
