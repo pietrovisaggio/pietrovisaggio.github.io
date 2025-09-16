@@ -19,10 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Pietro Visaggio"
-email: visaggip@bc.edu
-description: 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pietrovisaggio.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+description: "PhD candidate in Economics at Boston College."
+url: "https://pietrovisaggio.github.io" # replace with your custom domain if/when you add one
+baseurl: ""
 twitter_username: jekyllrb
 github_username:  jekyll
 
