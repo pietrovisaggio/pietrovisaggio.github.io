@@ -1,90 +1,19 @@
-
-.cv {
-  position: static;
-  top: 100px;
-  z-index: 2;
+.cv-wrapper {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin: 3rem -2.9rem 1.5rem;
-
-  /* visual reset */
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
-/* text label */
-.cv-label {
-  font-size: 2rem;     /* ↑ bump from 1 rem  → pick any size */
-  font-weight: 500;      /* a bit bolder if you like */
-  letter-spacing: 0.5px; 
+.cv-iframe {
+  width: 1000px;       /* proporzione migliore */
+  height: 1000px;   /* più alto, elimina effetto "tagliato" */
+  border: none;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3); /* opzionale: ombra per distacco */
+  border-radius: 15px; /* bordi arrotondati eleganti */
 }
 
-/* icon */
-.cv-pdf img {
-  width: 33px;           /* ↑ from 18–20 px */
-  height: 38px;          /* keep square */
-  opacity: .85;
+.cv-download {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
 }
-.cv-pdf:hover img { opacity: 1; }
-
-.cv-content{ flex:1; }
-
-
-/* main column */
-.cv-content {
-  flex: 1 1 0;
-  margin-top: 2.5rem;
-}
-
-/* 1) Dark-mode styling for CV cards (reinforce existing dark look) */
-.dark-mode .cv-card {
-  // background as you had:
-  background: rgba(255, 255, 255, 0.05); // same as rgba(#fff, .05)
-  color: #fff;                           // ensure text is light in dark mode
-  border-radius: 6px;                         // or whichever you prefer
-  padding: 2.25rem 1.5rem;
-  margin-bottom: 2rem;
-  a, h2, p, li {
-    color: inherit; // inherits #fff
-  }
-}
-
-/* 2) Light-mode styling for CV cards */
-.light-mode .cv-card {
-  background: #f7ecec;       // white card background
-  color: #222222;            // dark text for readability
-  border: 1px solid #f7ecec; 
-  border-radius: 6px;                         // or whichever you prefer
-  padding: 2.25rem 1.5rem;
-  margin-bottom: 2rem;
-  a, h2, p, li {
-    color: inherit; // dark text
-  }
-}
-
-/* tidy the heading inside the card */
-.cv-card h2 { margin-top: 0; }
-
-
-.cv-entry {
-  display: flex;
-  gap: 1.5rem;            /* space between columns  */
-  margin-bottom: 1rem;    /* space between entries   */
-}
-
-.cv-date {
-  min-width: 110px;
-  font-weight: 600;
-  text-align: left;
-  align-self: center;      /* centres only this cell within the flex row */
-}
-
-.cv-details {
-  line-height: 1.35;      /* tighter than default    */
-}
-
-.cv-title { font-weight: 600; }          /* bold title */
-.cv-institution { font-style: italic; }  /* italic institution */

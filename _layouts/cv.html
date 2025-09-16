@@ -7,27 +7,20 @@
 
   <body>
     {% include header.html %}
+<div class="wrapper">
 
-    <!-- ───────── ONE single wrapper ───────── -->
-    <div class="wrapper">
+  <!-- remove this
+  <div class="cv">
+    <span class="cv-label">Curriculum&nbsp;Vitae</span>
+  </div>
+  -->
 
-      <!-- sticky CV label + icon -->
-      <div class="cv">
-        <span class="cv-label">Curriculum&nbsp;Vitae</span>
+  <!-- main content only -->
+  <main class="cv-content">
+    {{ content }}
+  </main>
 
-        <a  class="cv-pdf"
-            href="{{ 'https://bc0-my.sharepoint.com/:b:/g/personal/visaggip_bc_edu/EX9FaguDunRGlf5rc-zO3okBKKrgyGeioOiXRtmq1rL_DA' | relative_url }}"
-            download>
-          <img src="{{ '/assets/images/pdf_icon.png' | relative_url }}" alt="">
-        </a>
-      </div>
-
-      <!-- cards -->
-      <main class="cv-content">
-        {{ content }}
-      </main>
-
-    </div><!-- /wrapper -->
+</div><!-- /wrapper -->
 
     
     <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
