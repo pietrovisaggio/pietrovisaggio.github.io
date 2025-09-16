@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "Pietro Visaggio"
-description: "PhD candidate in Economics at Boston College."
+description: "Pietro Visaggio is a PhD candidate in Economics at Boston College."
 url: "https://pietrovisaggio.github.io" # replace with your custom domain if/when you add one
 baseurl: ""
 twitter_username: jekyllrb
