@@ -13,6 +13,6 @@ permalink: /cv/
 
 <p class="cv-download">
   <a href="{{ '/assets/PietroVisaggio-CV.pdf' | relative_url }}" target="_blank" rel="noopener">
-    Download CV (PDF)
+    Download CV
   </a>
 </p>
