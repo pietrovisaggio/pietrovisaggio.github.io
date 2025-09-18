@@ -225,8 +225,13 @@ body {
 
 .research h2 {
   font-size: clamp(1.7rem, 2.4vw, 2.2rem);
-  font-weight: 600;
+  font-weight: 700;
   margin: 2.2rem 0 1.2rem;
+}
+
+.research h2:first-of-type {
+  font-size: clamp(2.0rem, 2.8vw, 2.4rem);
+  font-weight: 700;
 }
 
 .paper-list { list-style: none; padding: 0; margin: 0; }
@@ -234,21 +239,22 @@ body {
 
 /* Collapsible container */
 .paper {
-  border-left: 2px solid rgba(255,255,255,.18);
+  border-left: 2px solid rgba(20, 38, 63, .25);
   padding: .75rem 1rem .9rem;
   border-radius: 6px;
   background: transparent;
   transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
-.light-mode .paper        { border-left-color: rgba(20, 38, 63, .25); }
-.paper:hover              { background: rgba(255,255,255,.03); }
-.light-mode .paper:hover  { background: rgba(20, 38, 63, .04); }
+.light-mode .paper        { border-left-color: rgb(255, 255, 255); }
+.paper:hover              { background: rgba(255, 255, 255, 0.03); }
+.light-mode .paper:hover  { background: rgb(255, 255, 255); }
 
 /* Summary row */
 .paper > summary {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start !important;   /* left-align children */
+  text-align: left;
   gap: .75rem;
   cursor: pointer;
   list-style: none;
@@ -279,14 +285,14 @@ body {
 
 /* Meta and abstract */
 .paper-meta     { margin-top: .45rem; font-size: .95rem; opacity: .9; }
-.paper-abstract { margin-top: .65rem; line-height: 1.5; }
+.paper-abstract { margin-left: 3rem;  margin-right: 3rem; margin-top: .65rem; line-height: 1.5; }
 
 /* Open state highlight */
 .paper[open] {
-  border-left-color: #7dd3fc;         /* cyan accent (dark) */
-  box-shadow: 0 2px 0 0 rgba(0,0,0,.05) inset;
+  border-left-color: rgba(20, 38, 63, .25);         /* cyan accent (dark) */
+  box-shadow: 0 2px 0 0 rgba(20, 38, 63, .25) inset;
 }
-.light-mode .paper[open] { border-left-color: #2563eb; }
+.light-mode .paper[open] { border-left-color: #ffffff; }
 
 /* Section separators */
 .research hr {
@@ -300,107 +306,28 @@ body {
 
 
 
-/*
-
----
----
-@import "custom";   
-@import "minima";   
-@import "cv";      
-
-
-.wrapper { max-width: 900px; }
-
-
-.site-header { border-top: none; }
-
-.dark-mode .site-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.light-mode .site-header {
-  border-bottom: 1px solid #000000;
+.post-content .research h2,
+.research h2 {
+  border: 0 !important;
+  padding-top: 0 !important;
 }
 
-
-.site-header { 
-  padding-top: 10px;  
+/* Hide our section separators */
+.research hr {
+  display: none !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 
-.site-header .wrapper{
-  display:flex;
-  align-items:center;
-  padding-top: 6px;    
-  padding-bottom: 6px; 
-
+/* Ensure no borders/shadows on each paper card */
+.paper {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
+/* Light-mode safety net (some themes change colors) */
+.light-mode .paper { border: none !important; box-shadow: none !important; }
+.light-mode .post-content .research h2 { border: 0 !important; }
+.light-mode .research hr { display: none !important; }
 
-.nav-group{
-  margin-left:auto;                
-  display:flex;
-  align-items:center;
-  gap:1rem;                        
-}
-
-.site-nav{
-  display:flex;
-  gap:1.0rem;                      
-}
-
-
-.theme-toggle{
-  background:none;
-  border:0;
-  padding-left: -1px;
-  cursor:pointer;
-  font:inherit;
-  line-height:1;
-}
-.theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
-
-.site-header .site-title{
-  font-family: "Graphik", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
-  line-height: 1.1;
-  letter-spacing: .3px;
-  white-space: nowrap;
-  margin: 0;
-  opacity: 0;                
-  pointer-events: none;     
-}
-.site-header.show-title .site-title{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-
-.site-header .site-nav {
-  display: flex;
-  gap: 0rem;
-  margin: 0;               
-}
-
-
-body {
-  background: #14263f;
-  color: #ffffff;
-  transition: background-color .4s, color .4s;
-}
-
-.site-header .site-title,
-.site-header .site-nav .page-link { color: #ffffff; }
-
-.light-mode body {
-  background: #ffffff;
-  color: #14263f;
-}
-
-.light-mode .site-header .site-title,
-.light-mode .site-header .site-nav .page-link { color: #14263f; }
-
-
-.site-footer { display: none !important; }
-
-
-*/

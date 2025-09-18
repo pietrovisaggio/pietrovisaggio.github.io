@@ -7,8 +7,7 @@ show_title: true
 
 <div class="research">
 
-
-Working Papers
+<h2 class="section-title">Working Papers</h2>
 
 <ul class="paper-list">
   <li>
@@ -35,8 +34,7 @@ Working Papers
 
       <div class="paper-abstract">
         <p>
-          <strong>Abstract.</strong> Add a tight paragraph summarizing the paper. Keep it
-          compact; readers can click “Full text” for details.
+          The rapid expansion of renewable generation has intensified the need for storage technologies, yet the profitability and market impact of batteries depend critically on ownership structure. This paper studies whether co-ownership with renewables generates different operational incentives than standalone counterpart. I develop a stylized theoretical model showing that when supply is inelastic and renewable production is sufficiently high during low-price periods, co-owned batteries have incentives to charge more aggressively, raising contemporaneous renewable revenues even at the cost of higher electricity prices. I then rely on a dynamic empirical model calibrated to ERCOT real-time data to assess the empirical relevance of these theoretical predictions, in which transmission congestion governs whether operators act as price-takers or strategic players. The results show that ownership matters primarily in congested local markets: co-ownership nearly doubles project profitability but reduces consumer surplus by about $20k per year relative to standalone operation. These findings highlight the importance of ownership for the evaluation of subsidies and market design, as integration with renewables can create new channels of market power.
         </p>
       </div>
     </details>
@@ -46,8 +44,9 @@ Working Papers
 </ul>
 
 
+<h2 class="section-title">Work in Progress</h2>
 
-Work in Progress
+
 
 <ul class="paper-list">
   <li>
@@ -58,8 +57,7 @@ Work in Progress
       </summary>
       <div class="paper-abstract">
         <p>
-          <strong>Abstract.</strong> Short abstract text goes here. Explain the question,
-          data, and main result in 3–5 sentences so it fits nicely.
+           
         </p>
       </div>
     </details>
