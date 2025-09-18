@@ -33,32 +33,56 @@ body {
 
 
 
-/* ==========================================================================
-   [B] HEADER – DESKTOP LAYOUT
-   --------------------------------------------------------------------------
-   - Title shows only on pages that add .show-title to <header>
-   - Desktop nav is inline; theme toggle sits beside “CV”
-   - Tweak vertical spacing & the thin bottom border here
-   ========================================================================== */
-
-.site-header {
-  border-top: none;
-  padding-top: 10px;      /* vertical spacing above the row */
+/* ─────────────────────────────────────────────────────────
+   Header base: full width bar with left title / right nav
+   ───────────────────────────────────────────────────────── */
+.site-header{
+  border: 0 !important;        /* nuke top/bottom lines */
+  padding: 0;                  /* header itself has no extra vertical space */
 }
 
-.dark-mode .site-header { border-bottom: 1px solid rgba(255,255,255,0.2); }
-.light-mode .site-header { border-bottom: 1px solid #000; }
+:root { --wrap: 900px; }       /* keep this in sync with .wrapper max-width */
 
-.site-header .wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  padding-top: 6px;
-  padding-bottom: 6px;     /* adjust to close/open gap to the border */
+
+.header-bar{
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* pushes nav to the far right */
+  gap: 1rem;
 }
 
-/* Title: hidden by default, visible only when header has .show-title */
+/* Desktop nav group (kept on the far right) */
+.nav-group{
+  position: relative;               /* anchor for the mobile dropdown */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-nav{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+/* Theme toggle */
+.theme-toggle{
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+}
+.theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
+
+/* Title (shows only when header has .show-title) */
 .site-header .site-title{
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -67,127 +91,70 @@ body {
   letter-spacing: .3px;
   white-space: nowrap;
   margin: 0;
-  opacity: 0;             /* keep space but hide text */
-  pointer-events: none;   /* avoid “ghost” link when hidden */
+  opacity: 0;
+  pointer-events: none;
 }
-.site-header.show-title .site-title{
-  opacity: 1;
-  pointer-events: auto;
-}
+.site-header.show-title .site-title{ opacity: 1; pointer-events: auto; }
 
-/* Inline nav (desktop) */
-.site-nav{
-  display:flex;
-  align-items:center;
-  gap:1.0rem;              /* spacing between About/Research/CV */
-  margin:0;
-}
+/* Bottom hairline */
+.dark-mode .site-header { border-bottom: 1px solid rgba(255,255,255,0.2); }
+.light-mode .site-header{ border-bottom: 1px solid #000; }
 
-/* Theme toggle button (desktop + mobile) */
-.theme-toggle{
-  background:none;
-  border:0;
-  padding:0;               /* keep tight next to “CV” */
-  cursor:pointer;
-  font:inherit;
-  line-height:1;
-}
-.theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
+/* ─────────────────────────────────────────────────────────
+   Mobile hamburger menu (CSS-only)
+   ───────────────────────────────────────────────────────── */
 
-/* Colors for header text/links */
-.site-header .site-title,
-.site-header .site-nav .page-link { color: #ffffff; }
-.light-mode .site-header .site-title,
-.light-mode .site-header .site-nav .page-link { color: #14263f; }
-
-
-
-/* ==========================================================================
-   [C] HEADER – MOBILE MENU
-   --------------------------------------------------------------------------
-   - Breakpoint controls when hamburger replaces inline nav
-   - Change `760px` if you want it to swap earlier/later
-   ========================================================================== */
-
-/* Hamburger is hidden on desktop */
-.nav-toggle{ display:none; }
-
-/* hidden checkbox that controls menu open/close */
+/* hide checkbox on all viewports */
 .nav-trigger{ display:none; }
 
+/* hamburger hidden on desktop */
+.hamburger{ display:none; }
+
+.mobile-menu{
+  display: none;                    /* hidden until checkbox is checked */
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: var(--bg-color, #14263f);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 180px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.35);
+  z-index: 999;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Hamburger icon bars */
+.hamburger span{
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  + span { margin-top: 6px; }
+}
+
+/* Swap to mobile at your breakpoint */
 @media (max-width: 760px){
-  /* Show hamburger */
-  .nav-toggle{
-    display:inline-flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:5px;
-    width:30px; height:24px;
-    cursor:pointer;
-  }
-  .nav-toggle span{
-    height:2px; width:100%;
-    background: currentColor;
-    border-radius:2px;
-  }
+  /* hide desktop inline nav & desktop theme toggle */
+  .site-nav{ display: none; }
+  .theme-toggle--desktop{ display: none; }
 
-  /* Nav becomes a dropdown panel */
-  .site-nav{
-    display:none;                 /* hidden by default */
-    position:absolute;
-    right:12px;
-    top:56px;                     /* sits under header */
-    background: var(--bg-color, #14263f);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:12px;
-    padding:12px;
-    flex-direction:column;
-    gap:12px;
-    z-index:999;
-    min-width: 160px;
-    box-shadow: 0 8px 32px rgba(0,0,0,.35);
-  }
+  /* show hamburger */
+  .hamburger{ display: inline-block; cursor: pointer; }
 
-  /* When the checkbox is checked, show the menu */
-  #nav-trigger:checked ~ nav.site-nav{ display:flex; }
+  /* show dropdown when toggled */
+  #nav-trigger:checked ~ .mobile-menu{ display: flex; }
 
-  /* No extra left gap before the sun */
-  .site-nav .theme-toggle{ margin-left: 0; }
+  /* show mobile theme toggle inside menu */
+  .theme-toggle--mobile{ display: inline-block; }
 }
 
-
-
-/* ==========================================================================
-   [D] CV PAGE (EMBEDDED PDF)
-   --------------------------------------------------------------------------
-   - Desktop: fixed large viewport (your preferred look)
-   - Mobile: responsive, full width, tall enough to read
-   - Adjust the desktop sizes; the mobile rules won’t affect desktop
-   ========================================================================== */
-
-/* desktop-first: keep your preferred big embed */
-.cv-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.cv-iframe {
-  width: 1000px;              /* ← desktop width */
-  height: 1000px;             /* ← desktop height */
-  border: none;
-  box-shadow: 0 0 25px rgba(0,0,0,0.3);
-  border-radius: 15px;
-}
-
-/* mobile override (only phones) */
-@media (max-width: 768px){
-  .cv-wrapper { margin-top: 1.5rem; }
-  .cv-iframe {
-    width: 100%;              /* fluid on small screens */
-    height: 75vh;             /* tall enough to be useful */
-    border-radius: 12px;
-  }
+/* On desktop, hide the mobile theme toggle */
+@media (min-width: 761px){
+  .theme-toggle--mobile{ display: none; }
 }
 
 
@@ -274,3 +241,111 @@ body {
   opacity: .15;
   margin: 2rem 0 1.25rem;
 }
+
+
+
+
+/*
+
+---
+---
+@import "custom";   
+@import "minima";   
+@import "cv";      
+
+
+.wrapper { max-width: 900px; }
+
+
+.site-header { border-top: none; }
+
+.dark-mode .site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.light-mode .site-header {
+  border-bottom: 1px solid #000000;
+}
+
+
+.site-header { 
+  padding-top: 10px;  
+}
+
+.site-header .wrapper{
+  display:flex;
+  align-items:center;
+  padding-top: 6px;    
+  padding-bottom: 6px; 
+
+}
+
+
+.nav-group{
+  margin-left:auto;                
+  display:flex;
+  align-items:center;
+  gap:1rem;                        
+}
+
+.site-nav{
+  display:flex;
+  gap:1.0rem;                      
+}
+
+
+.theme-toggle{
+  background:none;
+  border:0;
+  padding-left: -1px;
+  cursor:pointer;
+  font:inherit;
+  line-height:1;
+}
+.theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
+
+.site-header .site-title{
+  font-family: "Graphik", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: .3px;
+  white-space: nowrap;
+  margin: 0;
+  opacity: 0;                
+  pointer-events: none;     
+}
+.site-header.show-title .site-title{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.site-header .site-nav {
+  display: flex;
+  gap: 0rem;
+  margin: 0;               
+}
+
+
+body {
+  background: #14263f;
+  color: #ffffff;
+  transition: background-color .4s, color .4s;
+}
+
+.site-header .site-title,
+.site-header .site-nav .page-link { color: #ffffff; }
+
+.light-mode body {
+  background: #ffffff;
+  color: #14263f;
+}
+
+.light-mode .site-header .site-title,
+.light-mode .site-header .site-nav .page-link { color: #14263f; }
+
+
+.site-footer { display: none !important; }
+
+
+*/
