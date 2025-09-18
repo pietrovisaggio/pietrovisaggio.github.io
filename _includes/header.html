@@ -23,7 +23,22 @@
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <span class="icon">🌞</span>
-      </button>
+      </button>    <!-- MOBILE: hamburger -->
+
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger" class="hamburger" aria-label="Apri/chiudi menu" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </label>
+      </div>
+
+      <!-- MOBILE dropdown panel -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a class="page-link" href="{{ '/' | relative_url }}">About</a>
+        <a class="page-link" href="{{ '/Research/' | relative_url }}">Research</a>
+        <a class="page-link" href="{{ '/cv/' | relative_url }}">CV</a>
+        <button class="theme-toggle mobile-only" aria-label="Toggle theme"><span class="icon">🌙</span></button>
+      </div>
+
     </div>
   </div>
 </header>

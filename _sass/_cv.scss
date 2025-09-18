@@ -19,3 +19,24 @@
   margin-top: 1.5rem;
   font-size: 1.1rem;
 }
+
+
+@media (max-width: 1024px) {
+  .cv-wrapper {
+    margin-top: 1.25rem;
+    padding: 0 12px;              /* a little breathing room on phones */
+  }
+  .cv-iframe {
+    width: 100%;                  /* fill screen width on mobile */
+    height: auto;                 /* let height be driven by aspect ratio below */
+    aspect-ratio: 8.5 / 11;       /* keep page proportion */
+    min-height: 70vh;             /* tall enough to read */
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,.25);
+  }
+}
+
+/* extra-small phones: slightly shorter so it doesn’t push below the fold */
+@media (max-width: 420px) {
+  .cv-iframe { min-height: 62vh; }
+}
