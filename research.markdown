@@ -11,7 +11,7 @@ show_title: true
 
 <ul class="paper-list">
   <li>
-    <details class="paper" open>
+    <details class="paper">
       <summary>
         <span class="paper-title">
           Pairing Batteries with Renewables: How Ownership Shapes Operational Incentives and Market Outcomes
