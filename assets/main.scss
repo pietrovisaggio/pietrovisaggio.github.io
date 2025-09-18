@@ -32,6 +32,29 @@ body {
 .site-footer { display: none !important; }
 
 
+:root{
+  --wrap: 900px;         /* content width */
+  --header-pad-x: 16px;  /* horizontal padding inside the header row */
+  --nav-gap: 1rem;       /* spacing between About/Research/CV and the sun */
+  --nav-nudge-x: 0px;    /* positive = move nav further right, negative = left */
+  --nav-nudge-y: 0px;    /* vertical nudge for the whole nav group */
+}
+
+/* use the variables */
+.site-header > .wrapper{
+  max-width: var(--wrap);
+  padding: 10px var(--header-pad-x);
+}
+
+.nav-and-toggle{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap);
+  transform: translate(var(--nav-nudge-x), var(--nav-nudge-y));
+}
+
+
 
 /* ===== Header – Desktop ===== */
 .site-header {
@@ -41,13 +64,22 @@ body {
 .dark-mode .site-header { border-bottom: 1px solid rgba(255,255,255,.2); }
 .light-mode .site-header { border-bottom: 1px solid #000; }
 
-.site-header .wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;   /* ← title left, nav right */
-  gap:1rem;
-  padding-top:6px;
-  padding-bottom:6px;
+/* the header row – same width as the page and centered */
+.site-header > .wrapper{
+  max-width: 900px;      /* match your page width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* we’ll push nav with margin-left:auto */
+  padding: 10px 16px;           /* <- change 16px to move both sides in/out */
+  gap: 1rem;
+}
+
+.nav-and-toggle{
+  margin-left: auto;        /* ← pushes the group to the right */
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap, 1rem);/* spacing between links and the sun */
 }
 
 /* Title: hidden by default, visible only when header has .show-title */
