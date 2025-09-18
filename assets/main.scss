@@ -8,7 +8,7 @@
 .wrapper { max-width: 900px; }
 
 /* ===== Header layout & spacing ===== */
-.site-header { border: none; }
+.site-header { border-top: none; }
 
 .dark-mode .site-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -55,17 +55,22 @@
 .theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
 
 /* Site title: keep space everywhere, only show text on pages with .show-title */
-.site-header .site-title {
+.site-header .site-title{
   font-family: "Graphik", Helvetica, Arial, sans-serif;
   font-weight: 200;
-  font-size: 2.2rem;
-  line-height: 1;
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  line-height: 1.1;
   letter-spacing: .3px;
   white-space: nowrap;
   margin: 0;
-  visibility: hidden;           /* keeps width, hides text */
+  opacity: 0;                /* hide visually only */
+  pointer-events: none;      /* avoid “ghost” link on pages w/o title */
 }
-.site-header.show-title .site-title { visibility: visible; }
+.site-header.show-title .site-title{
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 /* Nav */
 .site-header .site-nav {
@@ -95,7 +100,4 @@ body {
 /* ===== Footer off ===== */
 .site-footer { display: none !important; }
 
-/* ===== (Optional) CV page embed helpers if you use them ===== */
-.cv-wrapper { display: flex; justify-content: center; margin-top: 3rem; }
-.cv-iframe  { width: 1000px; height: 1000px; border: none; box-shadow: 0 0 25px rgba(0,0,0,.3); border-radius: 15px; }
-.cv-download{ text-align: center; margin-top: 1.5rem; font-size: 1.1rem; }
+
