@@ -1,4 +1,46 @@
+{%- assign show_title = false -%}
+{%- if page.show_title == true
+   or page.layout == 'cv'
+   or page.permalink == '/cv/'
+   or page.permalink == '/research/' -%}
+  {%- assign show_title = true -%}
+{%- endif -%}
 
+<header class="site-header{% if show_title %} show-title{% endif %}" role="banner">
+  <div class="wrapper">
+
+    <!-- site title (shown only when .show-title on header) -->
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      {{ page.title | default: site.title }}
+    </a>
+
+    <!-- one and only nav group -->
+    <div class="nav-and-toggle">
+      <!-- 1) the hidden checkbox controls mobile menu -->
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
+      <!-- 2) the hamburger button (label for the checkbox) -->
+      <label for="nav-trigger" class="nav-toggle" aria-label="Toggle menu" aria-controls="site-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </label>
+
+      <!-- 3) the menu itself -->
+      <nav id="site-menu" class="site-nav" aria-label="Primary">
+        <a class="page-link" href="{{ '/' | relative_url }}">About</a>
+        <a class="page-link" href="{{ '/Research/' | relative_url }}">Research</a>
+        <a class="page-link" href="{{ '/cv/' | relative_url }}">CV</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">🌞</span>
+        </button>
+      </nav>
+    </div>
+
+  </div>
+</header>
+
+
+
+<!--
 {%- assign show_title = false -%}
 {%- if page.show_title == true
    or page.layout == 'cv'
@@ -13,7 +55,7 @@
       {{ page.title | default: site.title }}
     </a>
 
-    <!-- right side: links + sun together -->
+    
     <div class="nav-group">
       <nav class="site-nav">
         <a class="page-link" href="{{ '/' | relative_url }}">About</a>
@@ -23,36 +65,11 @@
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <span class="icon">🌞</span>
-      </button>    <!-- MOBILE: hamburger -->
+      </button>
 
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger" class="hamburger" aria-label="Apri/chiudi menu" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
-        </label>
-      </div>
-
-      <!-- MOBILE dropdown panel -->
-      <!-- Mobile toggle + Nav -->
-    <div class="nav-and-toggle">
-      <!-- hidden checkbox controls menu state -->
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <!-- the hamburger button -->
-      <label for="nav-trigger" class="nav-toggle" aria-label="Toggle menu" aria-controls="site-menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </label>
-
-      <nav id="site-menu" class="site-nav" aria-label="Primary">
-        <a class="page-link" href="{{ '/' | relative_url }}">About</a>
-        <a class="page-link" href="{{ '/Research/' | relative_url }}">Research</a>
-        <a class="page-link" href="{{ '/cv/' | relative_url }}">CV</a>
-
-        <!-- theme toggle lives inside nav so it drops down on mobile -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <span class="icon">🌙</span>
-        </button>
-      </nav>
-    </div>
-
+      
     </div>
   </div>
 </header>
+
+-->
