@@ -3,6 +3,7 @@ layout: default
 title: "Pietro Visaggio"
 permalink: /
 description: "PhD Candidate in Economics"
+show_title: true
 ---
 
 <img
