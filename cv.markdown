@@ -1,7 +1,8 @@
 ---
 layout: cv
-title: CV
+title: Pietro Visaggio
 permalink: /cv/
+show_title: true
 ---
 
 <div class="cv-wrapper">

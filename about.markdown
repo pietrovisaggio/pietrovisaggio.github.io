@@ -1,8 +1,8 @@
 ---
-layout: default
-title: "Pietro Visaggio"
-permalink: /
-description: "PhD Candidate in Economics"
+layout: default          # use the same layout you use on the homepage
+title: "About Me"
+permalink: /about/
+description: "I am a PhD candidate in Economics at Boston College. My main research fields are empirical Industrial Organization and Energy Economics."
 ---
 
 <img
@@ -13,9 +13,7 @@ description: "PhD Candidate in Economics"
 
 Hello there, welcome to my website!  
 
-I am a PhD candidate in Economics at Boston College. My main research fields are empirical Industrial Organization and Energy Economics. 
-
-My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on Battery Energy Storage Systems (BESS), examining how their integration into electricity markets shapes outcomes such as market power, consumer surplus, and the effective integration of renewable resources.
+I am a PhD candidate in Economics at Boston College. My main research fields are empirical Industrial Organization and Energy Economics. My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on Battery Energy Storage Systems (BESS), examining how their integration into electricity markets shapes outcomes such as market power, consumer surplus, and the effective integration of renewable resources.
 
 <!-- Here you can download my <a href="{{ "/cv/" | relative_url }}" class="custom-link">CV</a>. -->
 

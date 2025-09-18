@@ -18,12 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Pietro Visaggio"
-description: "Pietro Visaggio is a PhD candidate in Economics at Boston College."
-url: "https://pietrovisaggio.github.io" # replace with your custom domain if/when you add one
-baseurl: ""
+title: "About Me"
+email: visaggip@bc.edu
+description: "PhD Candidate in Economics at Boston College"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://pietrovisaggio.com" # use your custom domain, not github.io
+
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: pietrovisaggio
+
 
 # Build settings
 theme: minima

@@ -1,5 +1,6 @@
 ---
-layout: default
-title: Research
+layout: cv
+title: Pietro Visaggio
 permalink: /Research/
+show_title: true
 ---

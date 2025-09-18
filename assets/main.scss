@@ -1,102 +1,101 @@
 ---
 ---
-@import "custom";   /* ①  variables – defines $brand-color-light */
-@import "minima";   /* ②  theme styles that use those variables  */
-@import "cv";       /* ③  your CV overrides – now the variable exists */
+@import "custom";   /* your variables */
+@import "minima";   /* base theme    */
+@import "cv";       /* your CV styles (iframe, etc.) */
 
-.wrapper {
-  /* Increase max-width so content spans more of viewport (reducing side margins) */
-  max-width: 800px;   /* or whatever suits you; larger = smaller side margins on wide screens */
-}
+/* Wider content column (smaller side margins on large screens) */
+.wrapper { max-width: 900px; }
 
-/*  Remove the thin top border line */
-.site-header {
-  border-top: none;
-  border-bottom: none;
-}
+/* ===== Header layout & spacing ===== */
+.site-header { border: none; }
 
-/* Hide the entire footer (title, email, GitHub/Twitter, description)  */
-.site-footer {
-  display: none !important;
-}
-
-/* Font of the body */
-body {
-  background-color: #14263f;  /* ← your new background colour */
-  transition: background-color 1s ease, color 1s ease;
-}
-
-
-/* Font of the header */
-/* Light-mode header style */
-.light-mode .site-header {   /* or whatever light-mode color you want */
-  background-color: #ffffff;       /* example */
-  transition: background-color 1s ease, color 1s ease;
-  /* other header styles for light mode */
-}
-
-/* Dark-mode header style */
 .dark-mode .site-header {
-  background-color: #14263f;       /* example dark background */
-  transition: background-color 1s ease, color 1s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.light-mode .site-header {
+  border-bottom: 1px solid #000000;
+}
+/* =================================== */
+
+.site-header { 
+  padding-top: 10px;   /* try 8–16px to taste */
+}
+/* Header base */
+.site-header .wrapper{
+  display:flex;
+  align-items:center;
+  padding-top: 6px;    /* was bigger */
+  padding-bottom: 6px; /* ↓ this is what removes the extra gap */
+  /* keep your padding if you set it already */
 }
 
-/* Font of the header title */
-.site-title {
+/* Push nav to the RIGHT and keep sun tight after CV */
+.nav-group{
+  margin-left:auto;                 /* ← shoves whole group to the right */
+  display:flex;
+  align-items:center;
+  gap:1rem;                         /* space between links and the sun */
+}
+
+.site-nav{
+  display:flex;
+  gap:1.0rem;                      /* space between links */
+}
+
+/* Sun button look */
+.theme-toggle{
+  background:none;
+  border:0;
+  padding-left: -1px;
+  cursor:pointer;
+  font:inherit;
+  line-height:1;
+}
+.theme-toggle .icon{ display:inline-block; transform: translateY(1px); }
+
+/* Site title: keep space everywhere, only show text on pages with .show-title */
+.site-header .site-title {
   font-family: "Graphik", Helvetica, Arial, sans-serif;
-  font-size: 2.5rem;   /* ≈ 38 px if root is 16 px */
-  font-weight: 200;           /* bold */
-  letter-spacing: 0.5px;      /* optional tighter or looser tracking */
-  transition: background-color 1s ease, color 1s ease;
+  font-weight: 200;
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: .3px;
+  white-space: nowrap;
+  margin: 0;
+  visibility: hidden;           /* keeps width, hides text */
+}
+.site-header.show-title .site-title { visibility: visible; }
+
+/* Nav */
+.site-header .site-nav {
+  display: flex;
+  gap: 0rem;
+  margin: 0;                    /* no hacks */
 }
 
-/* Default (dark-mode) header text */
-.site-header .site-title,
-.site-header .site-nav .page-link {
-  color: #ffffff; /* white text on dark background */
-  transition: background-color 1s ease, color 1s ease;
-}
-
-/* Light-mode overrides */
-.light-mode .site-header .site-title,
-.light-mode .site-header .site-nav .page-link {
-  color: #14263f; /* black text on light background */
-  transition: background-color 1s ease, color 1s ease;
-}
-
-
-/* Font of the page title */
-.page-title {
-  font-family: "Graphik", Helvetica, Arial, sans-serif; /* or any font */
-  font-size: 2.0rem;   /* ≈ 38 px if root is 16 px */
-  line-height: 1.1;    /* tighter spacing */
-  font-weight: 500;      /* bold */
-  letter-spacing: 0.5px;    
-  margin: 0.75em 0 -0.75em;       /* tweak spacing as you like */
-  transition: background-color 1s ease, color 1s ease;
-}
-
-
-/* Add your theme-toggle styles, if using CSS variables approach: */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #14263f;
-  transition: background-color 1.3s ease, color 1.3s ease;
-}
-
-.dark-mode {
-  --bg-color: #14263f;
-  --text-color: #ffffff;
-  transition: background-color 1s ease, color 1s ease;
-}
-
-
-
-/* Apply variables */
+/* ===== Colors (dark / light) ===== */
 body {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color);
+  background: #14263f;
+  color: #ffffff;
+  transition: background-color .4s, color .4s;
 }
-a {
-  color: var(--link-color);
+
+.site-header .site-title,
+.site-header .site-nav .page-link { color: #ffffff; }
+
+.light-mode body {
+  background: #ffffff;
+  color: #14263f;
 }
+
+.light-mode .site-header .site-title,
+.light-mode .site-header .site-nav .page-link { color: #14263f; }
+
+/* ===== Footer off ===== */
+.site-footer { display: none !important; }
+
+/* ===== (Optional) CV page embed helpers if you use them ===== */
+.cv-wrapper { display: flex; justify-content: center; margin-top: 3rem; }
+.cv-iframe  { width: 1000px; height: 1000px; border: none; box-shadow: 0 0 25px rgba(0,0,0,.3); border-radius: 15px; }
+.cv-download{ text-align: center; margin-top: 1.5rem; font-size: 1.1rem; }
