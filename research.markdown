@@ -7,7 +7,7 @@ show_title: true
 
 <div class="research">
 
-<h2 class="section-title">Working Papers</h2>
+  <h2 class="section-title wp">Working Papers</h2>
 
 <ul class="paper-list">
   <li>
@@ -44,7 +44,7 @@ show_title: true
 </ul>
 
 
-<h2 class="section-title">Work in Progress</h2>
+  <h2 class="section-title wip">Work in Progress</h2>
 
 
 
