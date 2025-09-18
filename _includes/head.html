@@ -44,7 +44,9 @@
 
 <!-- Favicons -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32"  href="{{ '/assets/images/favicon-32.png'  | relative_url }}">
+<link rel="icon" type="image/png" sizes="48x48"  href="{{ '/assets/images/favicon-48.png'  | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicon-192.png' | relative_url }}">
 
 <!-- Feeds -->
 {%- feed_meta -%}
@@ -59,8 +61,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": "WebSite",
   "name": "Pietro Visaggio",
+  "alternateName": "pietrovisaggio.com",
   "url": "https://pietrovisaggio.com/",
   "jobTitle": "PhD Candidate in Economics",
   "affiliation": { "@type": "CollegeOrUniversity", "name": "Boston College" },
