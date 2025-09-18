@@ -1,14 +1,15 @@
 {%- comment -%}
-  _includes/head.html: only inner content, no <head> wrapper
+  _includes/head.html: head INNER markup (no <head> wrapper)
 {%- endcomment -%}
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ page.title | default: site.title }}</title>
+{%- assign seo_title = page.seo_title | default: page.title | default: site.title -%}
+{%- assign meta_desc = page.seo_description | default: page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 -%}
 
-{%- assign meta_desc = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 200 -%}
+<title>{{ seo_title }}</title>
 <meta name="description" content="{{ meta_desc }}">
 
 <!-- App/site names -->
@@ -16,30 +17,32 @@
 <meta name="application-name" content="{{ site.title }}">
 <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
 
-<!-- Canonical -->
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+<!-- Canonical (requires site.url in _config.yml) -->
+{%- assign canonical = page.url | replace:'index.html','' | absolute_url -%}
+<link rel="canonical" href="{{ canonical }}">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:title" content="{{ seo_title }}">
 <meta property="og:description" content="{{ meta_desc }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ canonical }}">
 {%- if page.image or site.social_image -%}
   <meta property="og:image" content="{{ page.image | default: site.social_image | absolute_url }}">
 {%- endif -%}
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary{%- if page.image or site.social_image -%}_large_image{%- endif -%}">
-<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+{%- assign has_img = page.image or site.social_image -%}
+<meta name="twitter:card" content="{% if has_img %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ seo_title }}">
 <meta name="twitter:description" content="{{ meta_desc }}">
-{%- if page.image or site.social_image -%}
+{%- if has_img -%}
   <meta name="twitter:image" content="{{ page.image | default: site.social_image | absolute_url }}">
 {%- endif -%}
 
 <!-- Styles -->
 <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 
-<!-- Favicon -->
+<!-- Favicons -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" sizes="32x32">
 
@@ -52,11 +55,17 @@
 {%- endif -%}
 
 <!-- Structured data -->
+{%- if page.url == '/' -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "{{ site.title }}",
-  "url": "{{ '/' | absolute_url }}"
+  "@type": "Person",
+  "name": "Pietro Visaggio",
+  "url": "https://pietrovisaggio.com/",
+  "jobTitle": "PhD Candidate in Economics",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Boston College" },
+  "email": "mailto:visaggip@bc.edu",
+  "sameAs": ["https://www.linkedin.com/in/pietro-visaggio-393369161/"]
 }
 </script>
+{%- endif -%}
