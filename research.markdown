@@ -18,7 +18,7 @@ show_title: true
         </span>
 
         <!-- Put your real PDF path here -->
-        <a class="btn-link" href="{{ '/assets/papers/visaggio_public_funding.pdf' | relative_url }}" download>
+        <a class="btn-link" href="{{ '/assets/Draft_JMP.pdf' | relative_url }}" download>
           PDF
         </a>
       </summary>
