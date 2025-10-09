@@ -10,7 +10,7 @@ show_title: true
   src="{{ '/assets/images/PietroVisaggio.png' | relative_url }}"
   alt="Pietro Visaggio"
   width="300"
-  style="float:right; margin-left:1em; margin-bottom:1em; margin-top:-6.5em; border-radius:15px;" />
+  style="float:right; margin-left:1em; margin-bottom:1em; margin-top:-6em; border-radius:15px;" />
 
 Hello there, welcome to my website!  
 
