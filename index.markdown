@@ -7,10 +7,10 @@ show_title: true
 ---
 
 <img
-  src="{{ '/assets/images/image1.png' | relative_url }}"
+  src="{{ '/assets/images/PietroVisaggio.png' | relative_url }}"
   alt="Pietro Visaggio"
   width="300"
-  style="float:right; margin-left:1em; margin-bottom:1em;" />
+  style="float:right; margin-left:1em; margin-bottom:1em; margin-top:-6.5em; border-radius:15px;" />
 
 Hello there, welcome to my website!  
 
