@@ -15,7 +15,7 @@ show_title: true
       <summary>
         <span class="paper-title">
           Pairing Batteries with Renewables: How Ownership Shapes Operational Incentives and Market Outcomes 
-          (<a href="/assets/Pietro Visaggio JMP.pdf" class="custom-link" download>download here</a>)
+          (<a href="/assets/Pietro_Visaggio_JMP.pdf" class="custom-link" download>download here</a>)
         </span>
       </summary>
 
