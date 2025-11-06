@@ -14,7 +14,9 @@ show_title: true
 
 Hello there, welcome to my website!  
 
-I am a PhD candidate in Economics at Boston College and I will be on the 2025 – 26 job market. My main research fields are Industrial Organization and Energy Economics. 
+I am a PhD candidate in Economics at Boston College. My main research fields are Industrial Organization and Energy Economics. 
+
+I will be on the 2025–26 job market.
 
 My <a href="{{ "/Research/" | relative_url }}" class="custom-link">academic research</a> focuses on Battery Energy Storage Systems (BESS), examining how their integration into electricity markets shapes outcomes such as electricity prices, consumer welfare, and the effective integration of renewable resources.
 
